@@ -13,11 +13,12 @@
     />
 
     <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="./main.css">
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
-        font-size: 11px;
+        font-size: 14px;
         text-align: center;
       }
       .attribution a {
@@ -28,9 +29,10 @@
   <body>
     <main class="main-container">
       <header class="header">
-        <img src="./images/icon-menu.svg" alt="menu icon" />
-        <img src="./images/logo.svg" alt="logo" />
-
+        <div class="header__navigation">
+          <img class="header__menu" src="./images/icon-menu.svg" alt="menu icon" />
+          <img class="header__logo" src="./images/logo.svg" alt="logo" />
+        </div>
         <nav class="navbar">
           <ul class="navbar_items">
             <li><a class="navbar_link" href="#">Collections</a></li>
@@ -45,16 +47,16 @@
         <div class="modal-navbar__background">
           <nav class="modal-navbar">
             <img
-              class="modal-navbar__clase-icon"
+              class="modal-navbar__close-icon"
               src="./images/icon-close.svg"
               alt="close"
             />
-            <ul class="navbar__items">
-              <li><a class="modal-navbar_link" href="#">Collections</a></li>
-              <li><a class="modal-navbar_link" href="#">Men</a></li>
-              <li><a class="modal-navbar_link" href="#">Women</a></li>
-              <li><a class="modal-navbar_link" href="#">About</a></li>
-              <li><a class="modal-navbar_link" href="#">Contact</a></li>
+            <ul class="modal-navbar__items">
+              <li><a class="modal-navbar__link" href="#">Collections</a></li>
+              <li><a class="modal-navbar__link" href="#">Men</a></li>
+              <li><a class="modal-navbar__link" href="#">Women</a></li>
+              <li><a class="modal-navbar__link" href="#">About</a></li>
+              <li><a class="modal-navbar__link" href="#">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -62,9 +64,9 @@
         <div class="header__cart-avatar">
           <div class="header__cart">
             <div class="header__cart--notification">3</div>
-            <img src="./images/icon-cart.svg" alt="" />
+            <img  src="./images/icon-cart.svg" alt="" />
           </div>
-          <img src="./images/image-avatar.png" alt="" />
+          <img class="header__avatar" src="./images/image-avatar.png" alt="" />
         </div>
       </header>
 
@@ -134,16 +136,74 @@
       </section>
 
       <!-- inicio cart  modal -->
+      <div class="cart-modal">
+        <p class="cart-modal__title">Cart</p>
+        <div class="cart-modal__chekout-container">
+          <div class="cart-modal__detail-container">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="">
+            <div>
+              <p class="cart-modal__product">Autumn Limited Edition..</p>
+              <p class="cart-modal__price">$125 x3 <span>$375.00</span> </p>
+            </div>
+            <img  class="cart-modal__delete" src="./images/icon-delete.svg" alt="delete">
+          </div>
+          <button class="cart-modal__delete">Checkout</button>
+        </div>
+      </div>
+      <!-- fin  cart  modal -->
 
+      <!-- inicio gallery modal -->
+      <div class="modal-gallery__background">
+        <article class="modal-gallery">
+          <img class="modal-gallery__close" src="./images/icon-close.svg" alt="icon close">
+            <div class="modal-gallery__image-container">
+              <img
+                class="modal-gallery__previus"
+                src="./images/icon-previous.svg"
+                alt="previus"
+              />
+              <img class="nect" src="./images/icon-next.svg" alt="next" />
+            </div>
+            <div class="modal-gallery__thumnails">
+              <img
+                id="m1"
+                class="modal-gallery__thumnail"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="thumnail"
+              />
+              <img
+                id="m2"
+                class="modal-gallery__thumnail"
+                src="./images/image-product-2-thumbnail.jpg"
+                alt="thumnail"
+              />
+              <img
+                id="m3"
+                class="modal-gallery__thumnail"
+                src="./images/image-product-3-thumbnail.jpg"
+                alt="thumnail"
+              />
+              <img
+                id="m4"
+                class="modal-gallery__thumnail"
+                src="./images/image-product-4-thumbnail.jpg"
+                alt="thumnail"
+              />
+            </div>
+        </article>
+      </div>
+
+      <!-- fin gallery modal -->
       
-      <!-- inicio cart  modal -->
     </main>
-    <div class="attribution">
+
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#" target="_blank">Camilo Fernández</a>.
+    </footer>
     </div>
-    </div>
+    </body>
   </body>
 </html>
